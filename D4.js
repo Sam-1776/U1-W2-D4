@@ -167,3 +167,13 @@ console.log(newCutString);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function giveMeRandom(n) {
+    const arrRandomN = [];
+    for (let i = 0; i < n; i++) {
+        const random = Math.floor(Math.random() * 10);
+        arrRandomN[i] = random;
+    }
+    return arrRandomN
+}
+const newArrRandom = giveMeRandom(5);
+console.log(newArrRandom);
