@@ -131,6 +131,22 @@ console.log(newPhrase1);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function upperFirst(phrase) {
+  const arrPhrase = phrase.split(" ");
+  const allFirstUp = [];
+  for (let i = 0; i < arrPhrase.length; i++) {
+    let firstChar = arrPhrase[i].charAt(0)
+    let uppercase = firstChar.toUpperCase()
+    let cutStr = arrPhrase[i].slice(1);
+    let finalWord = uppercase + cutStr;
+    allFirstUp.push(finalWord);
+  }
+
+  console.log(allFirstUp.join(' '))
+  
+
+}
+upperFirst("piero si sposa");
 
 
 /* ESERCIZIO 9
@@ -155,7 +171,7 @@ function cutString(word) {
   for (let j = 0; j < arrPhrase.length; j++) {
     if (arrPhrase[j] !== first && arrPhrase[j] !== last) {
       newWord.push(arrPhrase[j]);
-    } 
+    }
   }
   const newPhrase = newWord.join("");
   return newPhrase;
@@ -168,12 +184,12 @@ console.log(newCutString);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 function giveMeRandom(n) {
-    const arrRandomN = [];
-    for (let i = 0; i < n; i++) {
-        const random = Math.floor(Math.random() * 10);
-        arrRandomN[i] = random;
-    }
-    return arrRandomN
+  const arrRandomN = [];
+  for (let i = 0; i < n; i++) {
+    const random = Math.floor(Math.random() * 10);
+    arrRandomN[i] = random;
+  }
+  return arrRandomN;
 }
-const newArrRandom = giveMeRandom(5);
+const newArrRandom = giveMeRandom(21);
 console.log(newArrRandom);
